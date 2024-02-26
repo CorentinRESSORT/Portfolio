@@ -1,0 +1,84 @@
+*, ::before, ::after
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root
+{
+    --header-backcolor: #1d1917;
+    --header-fontcolor: white;
+
+    --main-back: grey;
+    --main-font: purple;
+
+    --footer-back:pink;
+    --footer-back: yellow;
+    /*          font             */
+
+    --font-name: "Pixel"
+}
+
+@font-face {
+    font-family: 'Pixel';
+    src: url('../assets/font/PixeloidMono-d94EV.ttf');
+}
+
+/*  */
+header
+{
+    display: flex;
+    flex-flow: row nowrap;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding-left: 2vw;
+    padding-right: 2vw;
+    height: 10vh;
+
+    background-color: #1d1917;
+    color: white;
+
+    font-family: var(--font-name), sans-serif;
+}
+nav
+{
+    height: inherit;
+}
+nav > ul
+{
+    display: flex;
+    align-items: center;
+    width: 40vw;
+    height: inherit;
+}
+
+nav >ul > li
+{
+    list-style-type: none;
+    text-align: center;
+    width: 33.33%;
+}
+
+/* *********************************** */
+/*                MAIN                 */
+/* *********************************** */
+
+main
+{
+    height: 80vh;
+    background-color: var(--main-back);
+    color: var(--header-fontcolor);
+}
+
+/* *********************************** */
+/*                FOOTER               */
+/* *********************************** */
+
+footer
+{
+    height: 10vh;
+    background-color: var(--footer-back);
+}
