@@ -1,0 +1,10 @@
+@keyframes animbar {
+    0%
+    {
+        color:  black;
+    }
+    50%
+    {
+        color: white;
+    }
+}

@@ -9,6 +9,7 @@
 {
     --header-backcolor: #1d1917;
     --header-fontcolor: white;
+    --header-invert-backcolor: blueviolet;
 
     --main-back: grey;
     --main-font: purple;
@@ -21,9 +22,11 @@
 }
 
 @font-face {
-    font-family: 'Pixel';
+    font-family: 'Pidxel';
     src: url('../assets/font/PixeloidMono-d94EV.ttf');
 }
+
+@import url("animation.css");
 
 /*  */
 header
@@ -43,10 +46,54 @@ header
 
     font-family: var(--font-name), sans-serif;
 }
+
+header a
+{
+    text-decoration: none;
+    color: var(--header-fontcolor);
+}
+
+@keyframes animbar {
+    0%
+    {
+        opacity: 1;
+    }
+    40%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+#barreT
+{
+    color: white;
+    animation: animbar .8s infinite;
+}
+
+
 nav
 {
     height: inherit;
 }
+nav a
+{
+    display: flex;
+    height: 100%;
+    width: 100%;
+
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+nav a:hover
+{
+    background-color: var(--header-invert-backcolor);
+}
+
 nav > ul
 {
     display: flex;
@@ -60,6 +107,7 @@ nav >ul > li
     list-style-type: none;
     text-align: center;
     width: 33.33%;
+    height: 100%;
 }
 
 /* *********************************** */
