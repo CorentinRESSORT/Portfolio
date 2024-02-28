@@ -632,3 +632,14 @@ main > div
     transform: skew(0, 3deg);
     padding: 4%;
 }
+
+main > h1
+{
+    background-color: #2e2e2e;
+    width: 16vw;
+    padding: .1%;
+    text-align: center;
+
+    border: 2px solid #b05279;
+    rotate: -45deg;
+}
