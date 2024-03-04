@@ -353,7 +353,7 @@ footer
 
 .defil
 {
-    /* overflow: hidden; */
+    overflow: hidden;
     position: relative;
     width: 50%;
     height: 50vh;
@@ -369,11 +369,11 @@ footer
     width: 80%;
     margin-left: 10%;
     height: inherit;
-    /* position: absolute; */
+     position: absolute;    
     top: 0%;
 
     animation: crawl 10s infinite linear;
-    animation-play-state: paused;
+    /* animation-play-state: paused; */
 }
 
 @keyframes crawl {
