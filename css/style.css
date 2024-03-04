@@ -28,31 +28,6 @@
 
 @import url("animation.css");
 
-/*  */
-header
-{
-    display: flex;
-    flex-flow: row nowrap;
-
-    justify-content: space-between;
-    align-items: center;
-
-    padding-left: 2vw;
-    padding-right: 2vw;
-    height: 10vh;
-
-    background-color: #1d1917;
-    color: white;
-
-    font-family: var(--font-name), sans-serif;
-}
-
-header a
-{
-    text-decoration: none;
-    color: var(--header-fontcolor);
-}
-
 @keyframes animbar {
     0%
     {
@@ -68,6 +43,32 @@ header a
     }
 }
 
+
+/*  */
+header
+{
+    display: flex;
+    flex-flow: row nowrap;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding-left: 2vw;
+    padding-right: 2vw;
+    height: 20vh;
+
+    background-color: #1d1917;
+    color: white;
+
+    font-family: var(--font-name), sans-serif;
+}
+
+header a
+{
+    text-decoration: none;
+    color: var(--header-fontcolor);
+}
+
 #barreT
 {
     color: white;
@@ -79,6 +80,24 @@ nav
 {
     height: inherit;
 }
+
+nav > ul
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40vw;
+    height: inherit;
+}
+
+nav > ul > li
+{
+    list-style-type: none;
+    text-align: center;
+    width: 25%;
+    height: 10vh;
+}
+
 nav a
 {
     display: flex;
@@ -94,21 +113,6 @@ nav a:hover
     background-color: var(--header-invert-backcolor);
 }
 
-nav > ul
-{
-    display: flex;
-    align-items: center;
-    width: 40vw;
-    height: inherit;
-}
-
-nav >ul > li
-{
-    list-style-type: none;
-    text-align: center;
-    width: 33.33%;
-    height: 100%;
-}
 
 /* *********************************** */
 /*                MAIN                 */
