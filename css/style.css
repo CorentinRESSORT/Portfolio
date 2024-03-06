@@ -5,239 +5,60 @@
     box-sizing: border-box;
 }
 
-:root
+body
 {
-    --header-backcolor: #2e2e2e;
-    --header-fontcolor: white;
-    --header-invert-backcolor: #db9421;
-
-    --main-back: #2e2e2e;
-    --main-font: purple;
-
-    --footer-back:#2e2e2e;
-    /*          font             */
-
-    --font-name: "Pixel"
+    background-color: black;
 }
 
-@font-face {
-    font-family: 'Pixel';
-    src: url('../assets/font/PixeloidMono-d94EV.ttf');
-}
-
-@import url("animation.css");
-
-@keyframes animbar {
-    0%
-    {
-        opacity: 1;
-    }
-    40%
-    {
-        opacity: 0;
-    }
-    100%
-    {
-        opacity: 1;
-    }
-}
-
-
-/*  */
-header
+pre
 {
-    display: flex;
-    flex-flow: row nowrap;
-
-    justify-content: space-between;
-    align-items: center;
-
-    padding-left: 2vw;
-    padding-right: 2vw;
-    height: 15vh;
-
-    background-color: var(--header-backcolor);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.219);
-    color: white;
-
-    font-family: var(--font-name), sans-serif;
-}
-
-header a
-{
-    text-decoration: none;
-    color: var(--header-fontcolor);
-}
-
-#barreT
-{
-    color: white;
-    animation: animbar .8s infinite;
-}
-
-
-nav
-{
-    height: inherit;
-}
-
-nav > ul
-{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 40vw;
-    height: inherit;
-}
-
-nav > ul > li
-{
-    position: relative;
-    top: 0;
-    left: 0;
-    list-style-type: none;
     text-align: center;
-    width: 25%;
-    height: 50%;
+    font-size: 1rem;
+    color: white;
+
+    white-space: pre-wrap;
+    word-wrap: break-word;
 
 }
 
-.bloc_nav_img
+
+ul
 {
-    height: 100%;
-    overflow: hidden;
+    margin-top: .5%;
 }
-
-.bloc_nav_img > a
+li
 {
-    position: relative;
-    z-index: 1;
-
-    display: flex;
-    justify-content: center;
-    background-color: var(--header-invert-backcolor);
-
-    width: 100%;
-    height: 100%;
+    list-style:"-";
+    margin-left: 2%;
 }
-
-.bloc_nav_img > a:active, .bloc_nav_img:nth-child(1):active~.underbloc2
-{
-    top: 10%;
-    left: 4%;
-}
-
-.bloc_nav_img > a span
-{
-    align-self: center;
-}
-
-
-.underbloc, .underbloc2
-{
-    position: absolute;
-    top: 10%;
-    left: 4%;
-    width: 100%;
-    height: 100%;
-
-    background-color: var(--footer-back);
-    border: 1px solid white;
-}
-
-.underbloc2
-{
-    top: 4%;
-    left: 2%;
-}
-
-nav > ul > li > img
-{
-    height: 100%;
-    position: absolute;
-    
-    left: 0%;
-    top: 0%;
-
-    transition: left .2s linear;
-}
-
-nav > ul > li:hover > img
-{
-    /* top: -25%; */
-    left: -20%;
-    /* z-index: 0; */
-}
-/* *********************************** */
-/*                MAIN                 */
-/* *********************************** */
 
 main
 {
-    padding-top: 2%;
-    height: 80vh;
-    background-color: var(--main-back);
-    color: var(--header-fontcolor);
+    color: white;
+    margin: 10px;
 }
 
-
-/* *********************************** */
-/*                SECTION              */
-/* *********************************** */
-
-section
+#cursor
 {
-    margin-left: 5%;
-    width: 90vw;
-    background-color: #222222;
-}
+    display: inline-block;
 
+    width: 5px;
+    height: 1rem;
+    background-color: white;
 
-
-/* *********************************** */
-/*                FOOTER               */
-/* *********************************** */
-
-footer
-{
-    height: 10vh;
-    background-color: var(--footer-back);
-}
-
-
-/* SANDBOX */
-
-.imgdiv
-{
-    position: absolute;
-    left: 2%;
-    top: 100%;
-    height: 80%;
-
-    transition: top .5s linear;
-}
-
-.bloc_nav_img > a:hover > .imgdiv
-{
-    left: 2%;
-    top: 20%;
+    animation: blink 1s linear infinite;
 
 }
 
-.imgdiv2
-{
-    position: absolute;
-    right: 0%;
-    top: -100%;
-    height: 80%;
-
-    transition: top .5s linear;
+@media screen and (max-width: 530px) {
+    pre
+    {
+        font-size: .5rem;
+    }
 }
 
-.bloc_nav_img > a:hover > .imgdiv2
-{
-    top: 0%;
-
+@keyframes blink {
+    50%{
+        opacity: 0;
+    }
 }
-
-
