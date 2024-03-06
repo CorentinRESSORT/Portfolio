@@ -9,7 +9,7 @@
 {
     --header-backcolor: #2e2e2e;
     --header-fontcolor: white;
-    --header-invert-backcolor: blueviolet;
+    --header-invert-backcolor: #db9421;
 
     --main-back: #2e2e2e;
     --main-font: purple;
@@ -21,37 +21,11 @@
 }
 
 @font-face {
-    font-family: 'Pidxel';
+    font-family: 'Pixel';
     src: url('../assets/font/PixeloidMono-d94EV.ttf');
 }
 
 @import url("animation.css");
-
-/*  */
-header
-{
-    display: flex;
-    flex-flow: row nowrap;
-
-    justify-content: space-between;
-    align-items: center;
-
-    padding-left: 2vw;
-    padding-right: 2vw;
-    height: 10vh;
-
-    background-color: var(--header-backcolor);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.219);
-    color: white;
-
-    font-family: var(--font-name), sans-serif;
-}
-
-header a
-{
-    text-decoration: none;
-    color: var(--header-fontcolor);
-}
 
 @keyframes animbar {
     0%
@@ -68,6 +42,33 @@ header a
     }
 }
 
+
+/*  */
+header
+{
+    display: flex;
+    flex-flow: row nowrap;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding-left: 2vw;
+    padding-right: 2vw;
+    height: 15vh;
+
+    background-color: var(--header-backcolor);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.219);
+    color: white;
+
+    font-family: var(--font-name), sans-serif;
+}
+
+header a
+{
+    text-decoration: none;
+    color: var(--header-fontcolor);
+}
+
 #barreT
 {
     color: white;
@@ -79,37 +80,94 @@ nav
 {
     height: inherit;
 }
-nav a
-{
-    display: flex;
-    height: 100%;
-    width: 100%;
-
-    flex-flow: column wrap;
-    justify-content: center;
-}
-
-nav a:hover
-{
-    background-color: var(--header-invert-backcolor);
-}
 
 nav > ul
 {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     width: 40vw;
     height: inherit;
 }
 
-nav >ul > li
+nav > ul > li
 {
+    position: relative;
+    top: 0;
+    left: 0;
     list-style-type: none;
     text-align: center;
-    width: 33.33%;
+    width: 25%;
+    height: 50%;
+
+}
+
+.bloc_nav_img
+{
+    height: 100%;
+    overflow: hidden;
+}
+
+.bloc_nav_img > a
+{
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    justify-content: center;
+    background-color: var(--header-invert-backcolor);
+
+    width: 100%;
     height: 100%;
 }
 
+.bloc_nav_img > a:active, .bloc_nav_img:nth-child(1):active~.underbloc2
+{
+    top: 10%;
+    left: 4%;
+}
+
+.bloc_nav_img > a span
+{
+    align-self: center;
+}
+
+
+.underbloc, .underbloc2
+{
+    position: absolute;
+    top: 10%;
+    left: 4%;
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--footer-back);
+    border: 1px solid white;
+}
+
+.underbloc2
+{
+    top: 4%;
+    left: 2%;
+}
+
+nav > ul > li > img
+{
+    height: 100%;
+    position: absolute;
+    
+    left: 0%;
+    top: 0%;
+
+    transition: left .2s linear;
+}
+
+nav > ul > li:hover > img
+{
+    /* top: -25%; */
+    left: -20%;
+    /* z-index: 0; */
+}
 /* *********************************** */
 /*                MAIN                 */
 /* *********************************** */
@@ -145,3 +203,41 @@ footer
     height: 10vh;
     background-color: var(--footer-back);
 }
+
+
+/* SANDBOX */
+
+.imgdiv
+{
+    position: absolute;
+    left: 2%;
+    top: 100%;
+    height: 80%;
+
+    transition: top .5s linear;
+}
+
+.bloc_nav_img > a:hover > .imgdiv
+{
+    left: 2%;
+    top: 20%;
+
+}
+
+.imgdiv2
+{
+    position: absolute;
+    right: 0%;
+    top: -100%;
+    height: 80%;
+
+    transition: top .5s linear;
+}
+
+.bloc_nav_img > a:hover > .imgdiv2
+{
+    top: 0%;
+
+}
+
+
