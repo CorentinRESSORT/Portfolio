@@ -213,3 +213,6 @@ window.addEventListener("keydown", (key)=>{
 // TODO : Ajouter autocomplétion, raccourcir les Listeners, vérifier les redondances les mettre dans des fonctions
 
 // 💡 canvas, regarder pour faire des classes séparer le code en plusieurs fichiers, différencier les etats (terminal, jeux, pro)
+
+// ! --- Canvas APP ---
+
